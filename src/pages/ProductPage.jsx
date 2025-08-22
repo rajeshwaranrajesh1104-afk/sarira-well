@@ -77,33 +77,19 @@ export default function ProductPage() {
       <main className="flex-1 pt-24">
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="relative">
-                <Carousel className="w-full">
-                  {galleryImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover aspect-square rounded-xl shadow-lg"
-                      />
-                    </CarouselItem>
-                  ))}
-                </Carousel>
-                <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
-                  {PRODUCT.badges.map((badge, index) => (
-                    <Badge key={index} variant="secondary" className="bg-accent text-accent-foreground border-none">
-                      {badge}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              
+            <div className="max-w-2xl mx-auto">
               <div className="space-y-8">
                 <div>
                   <Badge variant="outline" className="mb-2 border-accent text-accent">Bestseller</Badge>
                   <h1 className="text-4xl md:text-5xl font-bold text-primary mb-2">{PRODUCT.name}</h1>
                   <p className="text-xl text-muted-foreground mb-6">{PRODUCT.subtitle}</p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {PRODUCT.badges.map((badge, index) => (
+                      <Badge key={index} variant="secondary" className="bg-accent text-accent-foreground border-none">
+                        {badge}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
                 
                 <Card className="bg-secondary/50 p-6 rounded-lg">
