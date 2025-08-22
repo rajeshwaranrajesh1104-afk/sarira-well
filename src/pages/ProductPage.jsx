@@ -82,13 +82,11 @@ export default function ProductPage() {
                 <Carousel className="w-full">
                   {galleryImages.map((image, index) => (
                     <CarouselItem key={index}>
-                      <Card className="overflow-hidden">
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-full object-cover aspect-square"
-                        />
-                      </Card>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover aspect-square rounded-xl shadow-lg"
+                      />
                     </CarouselItem>
                   ))}
                 </Carousel>
