@@ -15,16 +15,7 @@ export function Product() {
           <p className="text-xl text-muted-foreground">{PRODUCT.subtitle}</p>
         </div>
         
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2 flex justify-center">
-            <img
-              src={IMAGES.productMain}
-              alt="SARIRA Fig Malt Pouch"
-              className="w-full max-w-md mx-auto rounded-lg shadow-xl animate-floating"
-            />
-          </div>
-          
-          <div className="lg:w-1/2">
+        <div className="max-w-2xl mx-auto">
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">Key Benefits</h3>
               <ul className="space-y-3">
@@ -46,7 +37,6 @@ export function Product() {
                 <Link to="/product">Buy Now</Link>
               </Button>
             </div>
-          </div>
         </div>
       </div>
     </section>
